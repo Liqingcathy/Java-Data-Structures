@@ -1,0 +1,15 @@
+//Write a method called largerAbsVal that takes two integers as parameters 
+//returns the larger of the two absolute values. 
+
+	public static void main(String[] args) {
+		//int a=11;
+		//int b=7;
+		largerAbsVal(11,7);
+		System.out.println(result);
+		
+		largerAbsVal(4,-5);
+	}
+	public int largerAbsVal(int a, int b) {
+	 int result = Math.max(Math.abs(a), Math.abs(b));
+	 return result;
+}
