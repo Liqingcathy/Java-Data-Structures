@@ -1,0 +1,35 @@
+//The following program contains 7 errors. 
+//The corrected version of the program should produce the following output:
+//a is the smallest!
+
+public class Oops4 {
+    public static void main(String[] args) {
+        int a = 7, b = 42;
+        minimum(a, b);        //can we use Math.min(a,b) instead? not the minimum()?
+        int smaller = 0;      //initialize smaller to value 0; but why?
+        if (smaller <= a) {   //can we compare a < b instead?
+            System.out.println("a is the smallest!");
+        }
+    }
+
+    public static void minimum(int a, int b) {
+        if (a < b) {
+            int smaller = a;
+        } else if (a >= b) {         //why not a > b but a>=b?
+            int smaller = b;
+        }else{                       //what else condition it would be? shouln't be else (smaller = smaller) to get the next line?
+        int smaller;
+    }
+}
+}
+
+question: 
+why don't we simply write like below to get the same output?
+
+public static void main(String[] args) {
+	int a = 7, b = 42;
+	Math.min(a, b);
+	if ( a < b) {
+		System.out.println("a is the smallest");
+	}
+	}
