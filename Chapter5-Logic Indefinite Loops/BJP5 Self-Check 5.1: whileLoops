@@ -1,0 +1,106 @@
+//How many times will the loop execute its body? "zero, infinity, unknown"
+
+int x = 2; 
+while (x < 200) {
+    System.out.print(x + " " );
+    x *= x ;
+ }
+ 
+ // how code runs
+ x = 2 
+ while (x < 200 -> ture -> and execute the code
+ printout 2
+ and accumulate value x = 2 to 4 (x = x * x)
+ )
+ x = 4
+ while (x < 200 -> true -> execute the code
+ printout 4
+ and accumulate value x = 4 to 16 (x = x * x )
+ )
+ x = 16
+ while (x < 200 -> true -> execute the code
+ printout 16
+ and accumulate value x = 16 to 256 (x = x * x)
+ )
+ x = 256
+ while (x < 200 -> false -> can not execute the code
+ end the code to the end
+ 
+ output: 3 times
+ 2 4 16 
+ 
+ 
+ int x = 100;
+ while (x > 0){
+     System.out.println( x / 10 );
+     x = x / 2;
+ }
+ 
+ //How code runs
+ x = 100
+ 100 / 10      ->program printout 10 at this line
+ x = 100 / 2   -> x is assigned to 50
+ x = 50
+ 50 / 10       -> program printout 5 at this line
+ x = 50 / 2    -> x is assigned to 25
+ x = 25
+ 25 / 10       -> program printout 2 at this line
+ x = 25 / 2    -> x is assigned to 12
+ x = 12
+ 12 / 10       -> program printout 1 at this line
+ x = 12 / 2.   -> x is assigned to 6
+ x = 6
+ 6 / 10        -> program printout 0 at this line
+ x = 6 / 2     -> x is assigned to 3
+ x = 3
+ 3 / 10        -> program printout 0 at this line
+ x = 3 / 2     -> x is assigned to 1
+ x = 1         
+ 1 / 10        -> program printout 0 at this line
+ x = 1 / 2     -> x is assigned to 0
+ x = 0
+ while x > 0 -> false -> end the loop
+ 
+ output: 7.
+ 50
+ 25
+ 2
+ 1
+ 0
+ 0
+ 0
+ 
+ 
+ String word = "a";
+ while (word.length() < 10 ) {
+     word = "b" + word + "b";
+ } //while loop ends here
+ System.out.println(word);
+ 
+ //how code runs
+ 1. word is "a"
+    while (a.length(1) < 10 -> true -> execute the next line
+    word = bab // store the string "bab"
+ 2. word = "bab"
+    while (bab.length(3) < 10 -> ture -> execute the next line
+    word = bbabb // store the string "bbabb"
+ 3. word = "bbabb"
+    while (bbabb.length(5) <10 -> -> exectue the next line
+    word = bbbabbb // store the string "bbbabbb"
+ 4. word = "bbbabbb"
+    while (bbbabbb.length(7) <10 -> true -> execute the next line
+    word = bbbbabbbb // store the string "bbbbabbbb"
+ 5. word = "bbbbabbbbb"
+    while (bbbbabbbb.length(9) < 10 -> true -> execute the next line
+    word = bbbbabbbb // store the string "bbbbabbbb"
+ 6. word = "bbbbabbbb" 
+    while (bbbbabbbb.length(10) < 10 -> false -> end the loop
+    next code 
+    printout  
+    bbbbbabbbbb
+    
+    
+ 
+ 
+ 
+ 
