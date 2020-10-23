@@ -1,0 +1,41 @@
+//Write code to produce a cumulative product by multiplying together many numbers that are read from the console.
+/* output
+How many numbers? 4
+Next number --> 7
+Next number --> 2
+Next number --> 3
+Next number --> 15
+Product = 630
+*/
+
+import java.util.Scanner;
+
+public class CumulativeProduct {
+
+public static void main(String[] args) {
+    Scanner console = new Scanner(System.in);		
+    System.out.print("How many numbers? ");
+		int number = console.nextInt(); 
+    
+		int count = 1;                           // fencepost loop
+		for(int i = 1; i <= number; i++) {
+			System.out.print("Next number --> ");  //looping the "Next number --> " output
+			int num = console.nextInt();
+			count *= num;                          //store count = count * number value to variable count
+		}
+		System.out.println("Product = " + count);
+    }
+    
+    How codes run:
+    1. How many numbers? ex: 4 (input)
+       
+    2. Next number --> ex: 3 (input)
+       (count = 1) -> count *= number ( 1 * 3 ) -> Product = 1 * 3 = 3
+    3. Next number --> ex: 2 (input)
+       (count = 1) -> count *= number (1 * 2) -> Product = 3 * 2 = 6
+    4. Next number --> ex: 3 (input)
+       (count = 1) -> count *= number (1 * 3) -> Product = 6 * 3 = 18
+    5. Next number --> ex: 4 (input)
+      (count = 1) -> count *= number (1 * 3) -> Product = 18 * 4 = 72
+    6. Product = 72 
+    
