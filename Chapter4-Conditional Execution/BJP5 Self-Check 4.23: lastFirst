@@ -1,0 +1,39 @@
+/*
+1. Write a method named lastFirst that accepts a string as its parameter representing a person's first and last name. 
+2. The method should [return] the person's last name followed by the first initial and a period. 
+   For example, the call lastFirst("Marla Singer") should return "Singer, M." . 
+3. You may assume that the string passed consists of exactly two words separated by a single space.
+*/
+ 
+
+public class SubstringFirstLastName {
+public static void main(String[] args) {
+		
+System.out.print(lastFirst("Marla Singer"));
+         
+}
+public static String lastFirst(String name) {
+	String[] parts = name.split(" ");    -> ["Marla"(0) , "Singer"(1)]
+	return parts[1] + ", " + parts[0].charAt(0)+ ".";   -> [Singer, M.]
+}
+}
+
+input1: lastFirst("Marla Singer")
+return: "Singer, M."
+
+input2: lastFirst("Charles Barkley")
+return: "Barkley, C."
+
+Notes: 
+/*Java String split method is used for splitting a String into its substrings based on the given <delimiter> or <regular expression.>
+  ex: String str = new String("28/12/2013");
+  solution 1: 
+  String array1[]= str.split("/"); 
+  28
+  12
+  2013
+  solution 2:
+  String array2[]= str.split("/", 2);
+  28
+  12/2013
+*/
