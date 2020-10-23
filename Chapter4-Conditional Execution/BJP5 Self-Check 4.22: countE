@@ -1,0 +1,27 @@
+//Use correct method call from the Character class to count the number occurrences of the letter 'e' in a string.
+
+
+int count = 0;
+for (int i = 0; i < s.length(); i++) {
+
+    if (character.toLowerCase(s.charAt(i)) == 'e' ) {                //wrong syntax if (s.charAt(i).toLowerCase() == 'e') {
+    //Character.toLowerCase(s.charAt(i)) -> convert each character to lower case
+    //Character.toLowerCase(char ch) -> convert specific charcter to lower case
+        count++;
+    }
+}
+
+input1: fleece VEST"
+output: count = 4
+
+input2: eEeEeeEE
+count: 8
+
+input3: Billy Bob Thornton
+output: count = 0
+
+input4: STEAK tartare
+output: count = 2
+
+input5: E
+output: count = 0
