@@ -1,0 +1,45 @@
+/*Write an if statement that tests to see whether a String stored in a variable named phrase begins with a capital letter. 
+If the string begins with a capital letter, print capital . If not, print not capital . 
+Use at least one method call from the Character class in your solution. */
+
+//1. Character.isUpperCase(char ch) java method determines if the specified character is an uppercase character.
+if (Character.isUpperCase(phrase.charAt(0))){
+    System.out.println("capital");
+}else{
+    System.out.println("not capital");
+}
+
+/*test #1:hello
+output: not capital
+
+test #2:How are you
+output: capital
+
+test #3:Mississippi
+output:capital
+
+test #4:peanut butter
+output:not capital */
+
+
+/*2. 
+Character class isUpperCase() method
+isUpperCase() method is available in java.lang package.
+isUpperCase() method is used to check whether the given char value is uppercase or not. ex: String.isUpperCase("w")
+isUpperCase() method does not throw an exception at the time of checking the given char value is uppercase or not.
+//boolean syntex
+*/
+
+public class IsUpperCaseOfCharacterClass {
+    public static void main(String[] args) {  
+        boolean result1 = Character.isUpperCase('P'); 
+        boolean result2 = Character.isUpperCase('p');
+
+        System.out.println("Character.isUpperCase('P'): " + result1);
+        System.out.println("Character.isUpperCase('p'): " + result2);
+    }
+}
+
+/*output: 
+Character.isUpperCase('P'): true
+Character.isUpperCase('p'): false */
