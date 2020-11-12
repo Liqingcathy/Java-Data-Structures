@@ -1,0 +1,16 @@
+public static void main(String[] args) {
+    mystery (19);  //19 0
+    mystery (42);  //21 1
+    mystery (48);  //3 4 ?
+    mystery (40);  //5 3 ? 
+    mystery (64);  //1 6 ?
+	}
+    public static void mystery(int x) {
+        int y = 0;
+        while (x % 2 == 0) {
+            y++;
+            x = x / 2;
+        }
+        System.out.println(x + " " + y);
+    }
+}
