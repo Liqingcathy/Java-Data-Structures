@@ -1,0 +1,40 @@
+//For each of the following do/while loops, how many times will the loop execute its body? 
+
+public static void main(String[] args) {
+int x = 100;
+do {
+    System.out.println(x / 10);
+    x = x / 2;
+} while (x > 0);
+
+/*
+output:        
+10               
+5
+2
+1
+0
+0
+0
+*/
+
+int y = 100;
+	do {
+	    System.out.println(y);
+	    y = y / 2;
+	} while (y % 2 == 0);
+
+/* output:
+ 100
+ 50
+*/
+
+String str = "/\\";
+do {
+    str += str;
+} while (str.length() < 10);
+System.out.println(str);
+
+//output: /\/\/\/\/\/\/\/\
+}
+
