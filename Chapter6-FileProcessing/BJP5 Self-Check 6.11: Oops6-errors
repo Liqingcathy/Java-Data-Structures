@@ -1,0 +1,38 @@
+/*The program produce the following output:
+  Lines: 5
+  Words: 21
+
+ when it is run on the following input file, example.txt:
+  hello  how    are you
+  1 2 3 4
+
+  I am fine
+  This line has a large number of words on it */
+
+public class Oops6 {
+    public static void main(String[] args) throws FileNotFoundException { 
+        Scanner in = new Scanner(new File ("example.txt"));
+        countWords(in);
+    }
+
+    // Counts total lines and words in the input scanner.
+    // Passing Scanner parameter 
+    public static void countWords(Scanner input) {
+        int lineCount = 0;
+        int wordCount = 0;
+
+       //while there is a next line
+        while (input.hasNext()) {
+            Scanner line = new Scanner(input.nextLine());   // read&get one line
+            lineCount++;
+            //check if there is a token
+            while (line.hasNext()) {         
+                String word = line.next();   //read&get first word-hello
+                wordCount++;
+            }
+        }
+
+        System.out.println("Lines: " + lineCount);
+        System.out.println("Words: " + wordCount);
+    }
+}
