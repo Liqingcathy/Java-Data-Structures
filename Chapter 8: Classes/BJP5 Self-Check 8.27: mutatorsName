@@ -1,0 +1,31 @@
+/*Add mutator methods called setFirstName, setMiddleInitial, and setLastName to your encapsulated version of the Name class from the last exercise. Give the parameters the same names as your fields, and use the keyword this in your solution.*/
+
+public class Name {
+    private String firstName;
+    private char middleInitial;
+    private String lastName;
+    
+    public Name(String first, char middle, String last) {
+        this.firstName = first;
+        this.middleInitial = middle;
+        this.lastName = last;
+    }
+    public final String getFirstName(){
+        return firstName;
+}
+    public final char getMiddleInitial(){
+        return middleInitial;
+}
+     public final String getLastName(){
+        return lastName;
+}
+    public void setFirstName(String first){
+    this.firstName = first;
+}
+    public void setMiddleInitial(char middle){
+    this.middleInitial = middle;
+ }     
+        public void setLastName(String last){
+    this.lastName = last;
+ }
+}
