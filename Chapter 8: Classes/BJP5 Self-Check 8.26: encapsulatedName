@@ -1,0 +1,24 @@
+/* Encapsulate the Name class. Modify the existing code shown below to make its fields private, and add appropriate accessor methods to the class named getFirstName, getMiddleInitial, and getLastName.*/
+
+// A Name object represents a person's name such as "John Q. Public".
+public class Name {
+    private String firstName;
+    private char middleInitial;
+    private String lastName;
+    
+    public Name(String first, char middle, String last) {
+        this.firstName = first;
+        this.middleInitial = middle;
+        this.lastName = last;
+    }
+    public final String getFirstName(){
+        return firstName;
+}
+    public final char getMiddleInitial(){
+        return middleInitial;
+}
+    public final String getLastName(){
+        return lastName;
+}
+
+}
