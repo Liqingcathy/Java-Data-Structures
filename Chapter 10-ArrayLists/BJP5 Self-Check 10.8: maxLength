@@ -1,0 +1,11 @@
+//Write a method maxLength that takes an ArrayList of Strings as a parameter and that returns the length of the longest string in the list. 
+//If your method is passed an empty list, it should return 0.
+
+public int maxLength(ArrayList<String> sa){
+    int sum = 0;
+    for(String s : sa)      
+        if(s.length() > sum){
+            sum = s.length();            
+        }
+        return sum;
+}
