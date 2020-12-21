@@ -1,0 +1,38 @@
+/*Write a method maxOccurrences that accepts a List of integers as a parameter and returns the number of times the most frequently occurring integer (the "mode") occurs in the list. 
+Solve this problem using a Map as auxiliary storage. If the list is empty, return 0.*/
+
+//[1, 1, 2, 3, 4] return 2
+//[5, 6, 5, 6, 5, 6] return 3
+//[0, 0, 0, 0] return 4
+
+public static int maxOccurrences(List<Integer> list){
+    Map<Integer, Integer> map = new HashMap<>();
+    
+    //loop the list(ex:1,1,2,3,4)
+    Iterator<Integer> it = list.iterator();
+    while(it.hasNext()){
+        int num = it.next();
+        if(map.containsKey(num)){
+            map.put(num, map.get(num)+1);
+            //key:num, value:occurrence
+            //{1=1}, {1=2}.. {1=2,2=1,2=1,4=1}
+        }else {
+            map.put(num,1);
+        }
+    }
+    
+     //loop keySet of Map, and compare value- # of occurences {2, 1, 1, 1}
+     Set<Integer> keys = map.keySet();
+     Iterator<Integer> it2 = keys.iterator();
+     int max = 0; 
+     //int max = 1; error: if list is empty
+    
+    while(it2.hasNext( )){
+        int current = map.get(it2.next());      
+        if(current > max){
+            max = current;
+        }
+    }
+    return max;
+}
+
